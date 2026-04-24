@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alpha Hunt Capital | Liens Officiels",
+  title: "Rolack Trading | Liens officiels",
   description:
-    "Page de redirection officielle vers YouTube, Facebook, Telegram, WhatsApp et TikTok.",
+    "Rolack Trading — WHERE CAPITAL MEETS PRÉCISION. Liens YouTube, TikTok, Instagram, Facebook, WhatsApp, Telegram, Exness, Binance et FTMO.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

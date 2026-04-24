@@ -24,3 +24,48 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Fond trading en fondu alterné (page d’accueil) — opacité max ~0.28 + calque sombre par-dessus */
+@keyframes trade-cross-1 {
+  0%,
+  36% {
+    opacity: 0.26;
+  }
+  46%,
+  54% {
+    opacity: 0;
+  }
+  64%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.26;
+  }
+}
+
+@keyframes trade-cross-2 {
+  0%,
+  36% {
+    opacity: 0;
+  }
+  46%,
+  54% {
+    opacity: 0.26;
+  }
+  64%,
+  90% {
+    opacity: 0.26;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.trade-bg-cross-1 {
+  animation: trade-cross-1 18s ease-in-out infinite;
+}
+
+.trade-bg-cross-2 {
+  animation: trade-cross-2 18s ease-in-out infinite;
+}
