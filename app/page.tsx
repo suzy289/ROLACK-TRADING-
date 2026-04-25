@@ -34,7 +34,7 @@ const links: SocialLink[] = [
   },
   {
     name: "Instagram",
-    subtitle: "Stories ; reel et analyse",
+    subtitle: "Stories, reel et analyse",
     url: "https://www.instagram.com/rolacktrading?igsh=YWVoMmxodXBpZWM4&utm_source=qr",
     icon: InstagramIcon,
     iconBoxClass:
@@ -63,7 +63,7 @@ const links: SocialLink[] = [
   },
   {
     name: "Exness",
-    subtitle: "Créer votre compte de trading Exness",
+    subtitle: "Créer votre compte Exness",
     url: "https://one.exnesstrack.org/a/3093g17g84",
     logoSrc: "/logos/exness.svg",
     iconBoxClass:
@@ -71,14 +71,14 @@ const links: SocialLink[] = [
   },
   {
     name: "Binance",
-    subtitle: "Créer votre compte de trading Binance",
+    subtitle: "Créer votre compte Binance",
     url: "https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_VY2AM&utm_source=referral_entrance",
     logoSrc: "/logos/binance.svg",
     iconBoxClass: "border-[#F0B90B]/50 bg-[#1e2329] p-1.5",
   },
   {
     name: "FTMO",
-    subtitle: "Créer votre compte prop firm FTMO",
+    subtitle: "Créer votre compte prop firm",
     url: "https://trader.ftmo.com/?affiliates=zeBehUsFACLGNaiFierW",
     logoSrc: "/logos/ftmo.svg",
     iconBoxClass: "border-[#00a0e3]/60 bg-slate-100 p-1.5",
@@ -138,27 +138,20 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-[#000000] px-4 py-8 text-[#FFFFFF]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.18)_0%,_rgba(0,0,0,0)_45%)]" />
 
-      <section className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-[#0a0a0a]/80 shadow-[0_0_40px_rgba(0,0,0,0.55)] backdrop-blur-sm">
-        <div className="relative isolate h-44 w-full overflow-hidden sm:h-52">
+      <section className="relative mx-auto w-full max-w-lg overflow-hidden rounded-3xl border border-white/20 bg-[#0a0a0a]/80 shadow-[0_0_40px_rgba(0,0,0,0.55)] backdrop-blur-sm">
+        {/* Bannière */}
+        <div className="relative isolate h-36 w-full overflow-hidden bg-black sm:h-44">
           <Image
-            src="/profil.jpeg"
+            src="/baniere.png"
             alt="Rolack Trading — bannière"
             fill
-            className="scale-[1.03] object-cover object-[center_35%] brightness-[0.42] contrast-[1.05] saturate-[0.92]"
-            sizes="(max-width: 768px) 100vw, 28rem"
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 32rem"
             priority
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-[#0a0a0a]"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-0 bg-black/25 ring-1 ring-inset ring-white/15"
-            aria-hidden
           />
         </div>
 
-        <div className="relative z-10 -mt-14 overflow-hidden border-b border-white/15">
+        <div className="relative z-10 -mt-8 overflow-hidden border-b border-black/10 sm:-mt-10">
           <div className="pointer-events-none absolute inset-0 z-0">
             <div className="trade-bg-cross-1 absolute inset-0">
               <Image
@@ -179,15 +172,21 @@ export default function Home() {
               />
             </div>
           </div>
+          {/* Cadre "coupé" : partie basse dans le bloc contenu (laisse un espace pour l'avatar) */}
           <div
-            className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[#0a0a0a]/92 via-[#0a0a0a]/88 to-[#0a0a0a]/93"
+            className="pointer-events-none absolute inset-x-0 top-18 bottom-0 z-[1] ring-1 ring-inset ring-black/10"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-white/52 via-white/46 to-white/52"
             aria-hidden
           />
 
-          <div className="relative z-[2] flex flex-col items-center gap-3 px-5 pb-5 pt-1 sm:px-6 sm:pb-6">
-            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full border-2 border-[#D4AF37] bg-[#0a0a0a] ring-4 ring-[#0a0a0a]">
+          <div className="relative z-[2] flex flex-col items-center gap-3 px-5 pb-5 pt-10 text-black sm:px-6 sm:pb-6 sm:pt-12">
+            <div className="-mt-16 sm:-mt-20">
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full border border-[#D4AF37] bg-[#0a0a0a] ring-4 ring-white/60">
               <Image
-                src="/profile.jpeg"
+                src="/profil-m.png"
                 alt="Photo de profil"
                 fill
                 className="object-cover object-[center_20%]"
@@ -195,59 +194,65 @@ export default function Home() {
                 priority
               />
             </div>
+            </div>
 
             <header className="space-y-1 text-center">
-              <h1 className="text-2xl font-bold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              <h1 className="text-2xl font-bold tracking-tight text-black drop-shadow-[0_2px_8px_rgba(255,255,255,0.65)]">
                 ROLACK TRADING
               </h1>
-              <p className="text-sm text-white/90 drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)]">
+              <p className="text-sm text-black/80 drop-shadow-[0_1px_6px_rgba(255,255,255,0.55)]">
                 WHERE CAPITAL MEETS PRÉCISION
               </p>
+              <div className="mx-auto mt-2 w-56 rolack-underline" aria-hidden />
             </header>
 
             <div className="mt-3 flex w-full flex-col gap-3">
-            {links.map((link) => {
-              const Icon = link.icon;
+              {links.map((link) => {
+                const Icon = link.icon;
 
-              return (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${link.name} — ${link.subtitle}`}
-                  className="group flex w-full items-center gap-3 rounded-2xl border border-white/25 bg-white/10 p-4 transition-all duration-300 hover:scale-[1.01] hover:border-[#D4AF37] hover:bg-white/15 hover:shadow-[0_0_18px_rgba(212,175,55,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
-                >
-                  <span
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border transition-colors duration-300 group-hover:border-[#D4AF37] group-hover:brightness-110 ${link.iconBoxClass}`}
+                return (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${link.name} — ${link.subtitle}`}
+                    className="group flex w-full items-center gap-3 rounded-2xl border border-black/10 bg-white/60 p-4 transition-all duration-300 hover:scale-[1.01] hover:border-[#D4AF37] hover:bg-white/75 hover:shadow-[0_0_18px_rgba(212,175,55,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
-                    {link.logoSrc ? (
-                      <Image
-                        src={link.logoSrc}
-                        alt=""
-                        width={32}
-                        height={32}
-                        className="h-full w-full max-h-8 max-w-8 object-contain"
-                      />
-                    ) : Icon ? (
-                      <Icon className="h-5 w-5 shrink-0" />
-                    ) : null}
-                  </span>
+                    <span
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border transition-colors duration-300 group-hover:border-[#D4AF37] group-hover:brightness-110 ${link.iconBoxClass}`}
+                    >
+                      {link.logoSrc ? (
+                        <Image
+                          src={link.logoSrc}
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="h-full w-full max-h-8 max-w-8 object-contain"
+                        />
+                      ) : Icon ? (
+                        <Icon className="h-5 w-5 shrink-0" />
+                      ) : null}
+                    </span>
 
-                  <span className="flex min-w-0 flex-1 flex-col text-left">
-                    <span className="truncate text-base font-semibold">{link.name}</span>
-                    <span className="line-clamp-2 text-sm text-white/70">{link.subtitle}</span>
-                  </span>
+                    <span className="flex min-w-0 flex-1 flex-col text-left">
+                      <span className="truncate text-base font-semibold">{link.name}</span>
+                      <span className="line-clamp-2 text-sm text-black/65">{link.subtitle}</span>
+                    </span>
 
-                  <ChevronRight
-                    size={20}
-                    className="shrink-0 text-white/65 transition-colors duration-300 group-hover:text-[#D4AF37]"
-                    aria-hidden="true"
-                  />
-                </a>
-              );
-            })}
+                    <ChevronRight
+                      size={20}
+                      className="shrink-0 text-black/45 transition-colors duration-300 group-hover:text-[#D4AF37]"
+                      aria-hidden="true"
+                    />
+                  </a>
+                );
+              })}
             </div>
+
+            <p className="mt-4 text-center text-xs text-black/55">
+              Créé ❤️ par @rolacktrading
+            </p>
           </div>
         </div>
       </section>

@@ -25,11 +25,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Fond trading en fondu alterné (page d’accueil) — opacité max ~0.28 + calque sombre par-dessus */
+/* Fond trading en fondu alterné (page d’accueil) */
 @keyframes trade-cross-1 {
   0%,
   36% {
-    opacity: 0.26;
+    opacity: 0.78;
   }
   46%,
   54% {
@@ -40,7 +40,7 @@ body {
     opacity: 0;
   }
   100% {
-    opacity: 0.26;
+    opacity: 0.78;
   }
 }
 
@@ -51,11 +51,11 @@ body {
   }
   46%,
   54% {
-    opacity: 0.26;
+    opacity: 0.78;
   }
   64%,
   90% {
-    opacity: 0.26;
+    opacity: 0.78;
   }
   100% {
     opacity: 0;
@@ -63,9 +63,35 @@ body {
 }
 
 .trade-bg-cross-1 {
-  animation: trade-cross-1 18s ease-in-out infinite;
+  animation: trade-cross-1 5s ease-in-out infinite;
 }
 
 .trade-bg-cross-2 {
-  animation: trade-cross-2 18s ease-in-out infinite;
+  animation: trade-cross-2 5s ease-in-out infinite;
+}
+
+/* Soulignement animé noir ↔ jaune (Rolack Trading) */
+@keyframes rolack-underline {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.rolack-underline {
+  height: 3px;
+  border-radius: 9999px;
+  background-image: linear-gradient(
+    90deg,
+    #111111 0%,
+    #d4af37 25%,
+    #111111 50%,
+    #d4af37 75%,
+    #111111 100%
+  );
+  background-size: 200% 100%;
+  animation: rolack-underline 1.8s linear infinite;
+  opacity: 0.95;
 }
