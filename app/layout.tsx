@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Rolack Trading | Liens officiels",
   description:
     "Rolack Trading — WHERE CAPITAL MEETS PRÉCISION. Liens YouTube, TikTok, Instagram, Facebook, WhatsApp, Telegram, Exness, Binance et FTMO.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
