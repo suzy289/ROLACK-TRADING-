@@ -19,7 +19,7 @@ const links: SocialLink[] = [
   {
     name: "YouTube",
     subtitle: "Tutoriels et formations professionnelles",
-    url: "https://www.youtube.com/@SuzyNoumbissi",
+    url: "https://www.youtube.com/@rolacktrading",
     icon: YouTubeIcon,
     iconBoxClass:
       "border-red-500/50 bg-[#FF0000] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]",
